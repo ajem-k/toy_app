@@ -2,7 +2,9 @@
 
 <%= render @user %>
 
-<%= render @user.microposts.first %>
+<% if @user.microposts.first %>
+  <%= render @user.microposts.first %>
+<% end %>
 
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
